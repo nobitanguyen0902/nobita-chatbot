@@ -1,0 +1,13 @@
+/.vs
+*/*/bin
+*/*/obj
+*.lock.json
+*.min.css
+*.min.js
+*.user
+build
+node_modules
+.DS_Store
+/.idea
+global.json
+.env

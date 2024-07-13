@@ -1,0 +1,20 @@
+{
+  "name": "nobita-chatbot",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "env-cmd -f .env nodemon src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "16.4.5",
+    "env-cmd": "10.1.0",
+    "node-telegram-bot-api": "0.66.0"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.4"
+  }
+}
