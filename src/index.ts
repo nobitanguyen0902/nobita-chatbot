@@ -14,8 +14,8 @@ bot.on('message', (msg) => {
     if (!msg.text?.startsWith('/')) return;
 
     const command = msg.text.split(' ')[0];
-
-    if (!knownCommands.includes(command)) {
+    const isValidCommand = knownCommands.some(regex => regex.test(command));
+    if (!isValidCommand) {
         handleError(bot, msg);
     }
 })

@@ -1,5 +1,6 @@
 import * as TelegramBot from 'node-telegram-bot-api';
 import { handleStart } from './commands/start';
+import { handleSendProducts } from './commands/products';
 
 interface Command {
     pattern: RegExp;
@@ -8,9 +9,10 @@ interface Command {
 
 const commands: Command[] = [
     { pattern: /\/start/, handler: handleStart },
+    { pattern: /\/products/, handler: handleSendProducts },
 ];
 
-export const knownCommands = commands.map(command => command.pattern.source.split(' ')[0]);
+export const knownCommands = commands.map(command => command.pattern);
 
 export const registerCommands = (bot: TelegramBot) => {
     commands.forEach(({ pattern, handler }) => {
